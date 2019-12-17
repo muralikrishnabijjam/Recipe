@@ -1,0 +1,9 @@
+{% if name.id %}
+Name : {{ name.name }}<br>
+Ingredients : {{name.ingredients}}<br>
+Process : {{name.process}}<br>
+{% endif %}
+<br>
+<a href="{% url 'recipes:index' %}">Back</a><br>
+<br>
+<a href="{% url 'recipes:login' %}">Logout</a>

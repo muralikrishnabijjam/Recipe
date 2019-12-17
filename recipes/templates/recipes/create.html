@@ -1,0 +1,13 @@
+{% if errors %}
+{{errors}}
+{% endif %}
+<form action="." method="POST">
+{% csrf_token %}
+    {{ form.as_p }}
+<!--    Name:<input type="text", name="name"><br>-->
+<!--    Ingredients:<input type="text", name="ingredients"><br>-->
+<!--    Process:<input type="text", name="process"><br>-->
+<input type="submit" value="Add Recipe">
+</form><br>
+<br>
+<a href="{% url 'recipes:login' %}">Logout</a>

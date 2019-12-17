@@ -1,0 +1,12 @@
+<h1 align="centre", style="color:Red">Recipes</h1>
+{% if name %}
+<h2 align="left", style="color:Green">Items</h2>
+{%for each in name%}
+<ul>
+    <li><a href="{% url 'recipes:details' each.id  %}">{{ each.name }}</a> </li>
+</ul>
+{%endfor%}
+{% endif %}
+<a href="{% url 'recipes:create-recipes' %}">ADD Recipe</a><br>
+<br>
+<a href="{% url 'recipes:login' %}">Logout</a>
